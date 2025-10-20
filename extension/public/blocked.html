@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MalGuard - Malware Blocked</title>
+  <link rel="stylesheet" href="blocked.css">
+</head>
+<body>
+  <div class="overlay">
+    <div class="container">
+      <div class="header">
+        <img src="/logo.jpg" alt="MalGuard Logo" class="logo">
+        <h1>Malicious Website Blocked</h1>
+        <div class="sub">Attempted URL</div>
+        <div class="url-info">
+          <span class="label">URL: </span>
+          <span class="url" id="blocked-url" ></span>
+          <span class="confidence" id="confidence"></span>
+        </div>
+        <div class="message">
+          This site was flagged by MalGuard’s security engine.<br>
+          Accessing may expose your device to risks such as phishing, malware, or defacement.
+        </div>
+        <div class="buttons">
+          <button class="btn continue" id="continue" style="display:none;">Continue Anyway</button>
+          <button class="btn whitelist" id="whitelist">Add to Whitelist</button>
+          <button class="btn back" id="back">Go Back</button>
+        </div>
+      </div>
+      <div class="footer">
+        © 2025 MalGuard Secure Browsing
+      </div>
+    </div>
+  </div>
+  <script src="blocked.js"></script>
+</body>
+</html>

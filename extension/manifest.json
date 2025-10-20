@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "MalGuard Browser Protector",
+  "version": "1.0",
+  "description": "Blocks malicious URLs using ML detection and smart browser extension controls.",
+  "permissions": ["tabs", "scripting", "storage", "webNavigation"],
+  "host_permissions": [
+    "<all_urls>",
+    "http://127.0.0.1:5000/*",
+    "http://localhost:5000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "MalGuard Browser Protector",
+    "default_popup": "public/popup.html",
+    "default_icon": {
+      "16": "logo.jpg",
+      "32": "logo.jpg",
+      "48": "logo.jpg",
+      "128": "logo.jpg"
+    }
+  },
+  "icons": {
+    "16": "logo.jpg",
+    "32": "logo.jpg",
+    "48": "logo.jpg",
+    "128": "logo.jpg"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["public/blocked.html", "public/blocked.js", "public/blocked.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}

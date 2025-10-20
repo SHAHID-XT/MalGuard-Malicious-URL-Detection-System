@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MalGuard Security Panel</title>
+  <link rel="stylesheet" href="popup.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="popup-container">
+    <header>
+      <img src="/logo.jpg" class="popup-logo" alt="MalGuard Security">
+      <h2>MalGuard Protect</h2>
+      <p class="status">Protection <span id="status">Loading...</span></p>
+    </header>
+    <section class="actions">
+      <button id="toggle" class="popup-btn">Toggle Protection</button>
+      <button id="show-add-modal" class="popup-btn secondary">Add Domain</button>
+    </section>
+    <section class="whitelist-panel">
+      <h3>Whitelisted Domains</h3>
+      <ul id="whitelist-list" class="scroll-list"></ul>
+    </section>
+    <footer>
+      <span class="signature">© 2025 MalGuard</span>
+    </footer>
+  </div>
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h4>Add Domain</h4>
+      <input type="text" id="domain-input" placeholder="Enter domain">
+      <button id="add-domain" class="popup-btn">Add</button>
+      <button id="close-modal" class="popup-btn secondary">Cancel</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
